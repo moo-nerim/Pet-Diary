@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="https://www.flaticon.com/svg/static/icons/svg/2362/2362277.svg">
+    <title>login</title>
+    <link rel="stylesheet" href="login.css">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    
+    <!-- login Box -->
+    <img src="./image/pets.png" alt="topDogimg">
+    <div class="loginBox">
+      <div class="login">
+        <div class="id">
+            아이디 : <input type="text" name="" value="" id="id" required placeholder="대소문자,숫자 등의 조합으로 6 ~ 15자">
+        </div>
+        <div class="pw">
+          비밀번호 : <input type="password" name="" value=""id="pw" required placeholder="문자,숫자,특수문자 조합으로 8 ~ 15자">
+        </div>
+      </div>
+      <div class="button">
+        <input type="button" name="" value="회원가입" id="singUp" onclick="account()">
+        <input type="button" name="" value="로그인" id="login" onclick="login()" >
+      </div>
+    </div>
+    <script src="login.js"></script>
+  </body>
+</html>
