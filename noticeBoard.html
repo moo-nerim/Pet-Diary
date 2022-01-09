@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <!-- favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="https://www.flaticon.com/svg/static/icons/svg/2362/2362277.svg">
+  <title>Notice_Board</title>
+  <link rel="stylesheet" href="noticeBoard.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+  <!-- main_board.html로 돌아가기 -->
+  <img src="./image/house.png" id="houseImage" onclick="back_mainBoard()">
+  <img src="./image/write-letter.png" id="write" value="게시글 작성" onclick="write_popUp()">
+
+  <!-- write Popup -->
+  <div id="writeDiary">
+    <button type="button" name="button_X" id="button_X" onclick="cancel_X()">x</button>
+    <input type="file" id="imageFile" accept="image/*">
+    <label for="imageFile" id="writeDay">
+      <img src="./image/focus.png" id="pocusImage">
+    </label>
+    <div class="paper-content">
+      <textarea id="post" class="post" name="post"></textarea>
+    </div>
+    <input type="button" id="saveWriteButton" class="saveWriteButton" value="저장" onclick="savePost()">
+  </div>
+
+  <div class="dog-walking_Ani">
+    <img src="./image/dog-walking.png" id="dog-walking_Image">
+  </div>
+
+  <!-- Post Box -->
+  <fieldset id="Post_wrap">
+    <legend>자유 게시판</legend>
+    <div id="Post_writeBox"></div>
+  </fieldset>
+
+  <link rel='stylesheet' href='emojionearea2.min.css'>
+  <script src='emojionearea.min.js'></script>
+
+  <script src="noticeBoard.js?=1"></script>
+</body>
+
+</html>
