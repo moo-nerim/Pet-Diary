@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <!-- favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="https://www.flaticon.com/svg/static/icons/svg/2362/2362277.svg">
+  <title>Pet_registration</title>
+  <link rel="stylesheet" href="Dog_registration.css">
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+  <!-- DogList -->
+  <div id="DogList">
+    <div id="addlist1" onclick="addList_PopUp()">
+      <img src="./image/focus.png" id="pocusImage">
+    </div>
+    <div id="addlist2" onclick="addList_PopUp()">
+      <img src="./image/focus.png" id="pocusImage">
+    </div>
+    <div id="addlist3" onclick="addList_PopUp()">
+      <img src="./image/focus.png" id="pocusImage">
+    </div>
+    <div id="addlist4" onclick="addList_PopUp()">
+      <img src="./image/focus.png" id="pocusImage">
+    </div>
+    <p id="intro">hello</p>
+  </div>
+
+  <!-- registration popUp -->
+  <div id="registration">
+    <input type="file" id="imageFile" accept="image/*">
+    <label for="imageFile" id="registDog">
+      <img src="./image/focus.png" id="pocusImage">
+    </label>
+    <p>반려동물을 등록해주세요</p>
+    <div>이름*
+      <input type="text" placeholder="ex) 콩이" required id="name">
+    </div>
+    <div>생일*
+      <input type="date" required id="age">
+    </div>
+    <div><span id="hobbyText">취미</span>
+      <input type="text" placeholder="ex) 인형 물어뜯기" id="hobby">
+    </div>
+    <input type="submit" id="submitInformation" value="저장하기" onclick="addList()">
+    <button type="button" name="button_X" id="button_X" onclick="cancel_X()">x</button>
+  </div>
+  <script src="Dog_registration.js"></script>
+</body>
+
+</html>

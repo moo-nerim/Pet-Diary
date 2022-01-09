@@ -1,0 +1,186 @@
+/* background */
+body{
+  background-image : url('./image/backgroundimage.jpg');
+}
+
+/* DogList */
+/* Intro text (000님) */
+#intro{
+  /* font 정보 */
+  font-family: 'Jua', sans-serif;
+  font-size: 40px;
+
+  /* 위치 지정 */
+  position: relative;
+  top:-740px;
+  text-align: center;
+}
+
+/* 반려동물 저장하는 큰 테두리 */
+#DogList{
+  width: 400px;
+  height: 550px;
+  border: 4px solid #65532f;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+/* custom file => 기존 파일 형식에서 변경*/
+#addlist1, #addlist2, #addlist3, #addlist4{
+  height: 130px;
+  width: 130px;
+  background-color: #fcf1ac;
+  margin: 20px;
+  border: 3px dashed rgb(235, 158, 80);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 1번째 반려동물 저장 칸 */
+#addlist1{
+  position: relative;
+  top:50px;
+  left: 20px;
+}
+/* 2번째 반려동물 저장칸 */
+#addlist2{
+  position: relative;
+  top: -106px;
+  left: 200px;
+}
+/* 3번째 반려동물 저장칸 */
+#addlist3{
+  position: relative;
+  top:-20px;
+  left: 20px;
+}
+/* 4번째 반려동물 저장칸 */
+#addlist4{
+  position: relative;
+  top: -175px;
+  left: 200px;
+}
+
+/* registration popUp */
+/* title(반려견을 등록해주세요) */
+p{
+  font-family: 'Jua', sans-serif;
+  font-size: 40px;
+  position: relative;
+  top: -260px;
+  margin-top: 20;
+  text-align: center;
+}
+
+/* file style change */
+/* 기존 file 형식 제거 */
+input[type="file"]{
+  display: none;
+}
+
+/* input type file custom */
+#registDog{
+height: 200px;
+width: 200px;
+background-color: #fcf1ac;
+border: 3px dashed rgb(235, 158, 80);
+text-align: center;
+left: 0; right: 0;
+margin: 0 auto;
+margin-top: 50px;
+position: relative;
+top:80px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+/* image size */
+/* focus.png */
+#pocusImage{
+  height: 50px;
+}
+
+/* text style */
+#registration{
+  display: none;
+  border: 3px solid #65532f;
+  background-color: #e8cfa1;
+  width: 500px;
+  height: 700px;
+  font-family: 'Jua', sans-serif;
+  font-size: 30px;
+  text-align: center;
+  position: absolute;
+  top:20px;
+  bottom: 50px;
+  left: 500px;
+}
+/* 취미 */
+#hobby{
+  margin-left: 16px;
+}
+
+/* input type border style */
+input[type="text"], input[type="date"]{
+  border-bottom: dashed;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  font-family: 'Jua', sans-serif;
+  font-size: 30px;
+  background: transparent;
+  width: 250px;
+  margin-bottom: 20px;
+}
+
+/* placeholder attribute font */
+input::placeholder{
+  font-family: 'Jua', sans-serif;
+}
+
+input[type="date"]{
+  font-family: 'Jua', sans-serif;
+}
+
+/* submit button(id = "submitInformation") */
+input[type="submit"]{
+  margin-top: 30px;
+  font-family: 'Jua', sans-serif;
+  font-size: 20px;
+  width: 150px;
+  height: 35px;
+  border-radius: 10px;
+  background-color: rgb(232, 161, 81);
+  border: 2px solid;
+}
+/* button 클릭시 아래로 움직이고 배경 색 변경 */
+input[type="submit"]:active {
+  background-color: rgb(227, 137, 33);
+  transform: translateY(4px);
+}
+
+/* cancel 버튼 */
+#button_X {
+  color: #fff;
+  font-size: 20px;
+  background: #60553c;
+  display: block;
+  border: 3px solid black;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  left: 450px;
+  top: 10px;
+}
+/* cancel 버튼에 마우스 올렸을 시 배경 색 변경 */
+#button_X:hover {
+  background: #3f3f3f;
+  cursor: pointer;
+}
+#button_X:active {
+  background: #2f2f2f;
+  cursor: pointer;
+}
