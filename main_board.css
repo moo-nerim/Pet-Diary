@@ -1,0 +1,495 @@
+/* background */
+body {
+  background-image: url('./image/backgroundimage.jpg');
+}
+
+/* ※ 유튜브 "코남" 참고 */
+/* checkbox custom */
+input[id="menuicon"] {
+  display: none;
+}
+
+input[id="menuicon"]+label {
+  display: block;
+  margin: 30px;
+  width: 50px;
+  height: 40px;
+  position: relative;
+  cursor: pointer;
+}
+
+/* navigater button */
+input[id="menuicon"]+label span {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  border-radius: 30px;
+  background: #000;
+  transition: all .35s;
+}
+
+/* navigater button ㅡ style */
+input[id="menuicon"]+label span:nth-child(1) {
+  top: 0;
+}
+
+input[id="menuicon"]+label span:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+input[id="menuicon"]+label span:nth-child(3) {
+  bottom: 0;
+}
+
+input[id="menuicon"]:checked+label {
+  z-index: 2;
+}
+
+/* navigater button x style */
+input[id="menuicon"]:checked+label span {
+  background: #000;
+}
+
+input[id="menuicon"]:checked+label span:nth-child(1) {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+input[id="menuicon"]:checked+label span:nth-child(2) {
+  opacity: 0;
+}
+
+input[id="menuicon"]:checked+label span:nth-child(3) {
+  bottom: 50%;
+  transform: translateY(50%) rotate(-45deg);
+}
+
+/* slidebar style */
+div[class="sidebar"] {
+  width: 360px;
+  height: 100%;
+  background: #edcd79;
+  position: fixed;
+  top: 0;
+  left: -360px;
+  z-index: 1;
+  transition: all .35s
+}
+input[id="menuicon"]:checked+label+div {
+  left: 0;
+}
+
+/* slidebar dog image */
+.dog-profile img {
+  margin-top: 90px;
+  margin-left: 80px;
+  border-radius: 2%;
+  border: 5px dashed #65532f;
+}
+
+/* slidebar dog image */
+.dog-name p {
+  font-family: 'Jua', sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+  margin-left: 80px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+/* slidebar dog age */
+.dog-age p {
+  font-family: 'Jua', sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+  margin-left: 80px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+/* slidebar dog hobby */
+.dog-hobby p {
+  font-family: 'Jua', sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+  margin-left: 80px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+/* D-day box */
+fieldset {
+  overflow: auto;
+  width: 270px;
+  height: 150px;
+  font-family: 'Jua', sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+  border: 5px solid #65532f;
+  background-color: rgba(227, 174, 172, 0.85);
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+/* scrollbar design */
+/* ※Eoldam spark 참고 */
+fieldset::-webkit-scrollbar {
+  width: 10px;
+}
+fieldset::-webkit-scrollbar-thumb {
+  background-color: #af4281;
+  border-radius: 10px;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+}
+fieldset::-webkit-scrollbar-track {
+  background-color: rgb(186, 119, 151);
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 5px white;
+}
+
+/* logout */
+#logout {
+  font-family: 'Jua', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  background-color: rgb(175, 159, 117);
+  border-radius: 5px;
+  border: 3px solid #000000;
+  margin-left: 250px;
+  position: absolute;
+  bottom: 20px;
+}
+/* 버튼 들어가는 효과 */
+#logout:active {
+  transform: translateY(4px);
+}
+
+/* write event */
+#eventButton {
+  width: 80px;
+  position: relative;
+  float: right;
+  right: 60px;
+  top: -70px;
+}
+/* 버튼 들어가는 효과 */
+#eventButton:active {
+  transform: translateY(4px);
+}
+
+/* calendar */
+.content-right {
+  width: 1000px;
+  height: 580px;
+  margin-left: 460px;
+  position: fixed;
+  top: 120px;
+  border: 4px solid #65532f;
+  border-radius: 0px 10px 10px 0px;
+  overflow: hidden;
+  background: #FDF2C5;
+}
+/* 메인 날짜 표시 */
+.main-wrap {
+  text-align: center;
+  padding: 20px 0 0 0;
+}
+
+.main-day {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.main-date {
+  font-size: 120px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+/* 일요일 토요일 다른색 지정 */
+.sun {
+  color: #ef3333;
+}
+.sat {
+  color: #2107e0;
+}
+
+/* calendar td */
+.content-right table tr td {
+  font-family: 'Jua', sans-serif;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  padding-top: 15px;
+  padding-bottom: 20px;
+  padding-left: 46px;
+  padding-right: 46px;
+}
+
+/* click */
+.active {
+  background: #a46d08;
+  color: #ffffff;
+}
+
+/* show Diary */
+.content-left {
+  width: 400px;
+  height: 580px;
+  margin-left: 51px;
+  position: fixed;
+  top: 120px;
+  border: 4px solid #65532f;
+  border-radius: 10px 0px 0px 10px;
+  overflow: hidden;
+  background: #65532f;
+}
+
+/* 요일 표시 */
+.main-day {
+  font-size: 40px;
+  font-weight: bold;
+  color: rgb(231, 221, 97);
+  position: absolute;
+  top: 10px;
+  left: 80px;
+}
+
+/* 날짜 표시 */
+.main-date {
+  font-size: 40px;
+  font-weight: bold;
+  color: rgb(231, 221, 97);
+  position: absolute;
+  margin: 0px;
+  top: 10px;
+  left: 17px;
+}
+
+/* file style change */
+/* 기존 file 형식 제거 */
+input[type="file"] {
+  display: none;
+}
+
+/* input type file custom */
+#writeDay {
+  height: 200px;
+  width: 300px;
+  background-color: #fcf1ac;
+  border: 4px dashed rgb(57, 49, 40);
+  text-align: center;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  position: relative;
+  top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* image size */
+/* focus.png */
+#pocusImage {
+  height: 80px;
+}
+
+/* writeDiary */
+.paper-content {
+  position: absolute;
+  top: 320px;
+  right: 55px;
+  bottom: 30px;
+  left: 55px;
+  background: linear-gradient(transparent, transparent 28px, #e8e2d2 28px);
+  background-size: 30px 30px;
+}
+
+/* Nikola Fivera Petrovic 참고 */
+.paper-content textarea {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  max-height: 100%;
+  line-height: 30px;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: rgb(224, 173, 190);
+  font-family: 'Jua', sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+/* 수정 button */
+#modifyDiary {
+  width: 50px;
+  height: 35px;
+  font-family: 'Jua', sans-serif;
+  font-size: 20px;
+  background-color: rgb(226, 191, 94);
+  border-radius: 5px;
+  border: 3px solid #000000;
+  position: absolute;
+  top: 540px;
+  left: 210px;
+  cursor: pointer;
+  box-shadow: 0 9px #574530;
+}
+/* 버튼 애니메이션 */
+#modifyDiary:hover {
+  background-color: #FF8C00;
+}
+#modifyDiary:active {
+  background-color: #FF8C00;
+  box-shadow: 0 5px #574530;
+  transform: translateY(4px);
+}
+
+/* 저장 button */
+#submitDiary {
+  width: 85px;
+  height: 35px;
+  font-family: 'Jua', sans-serif;
+  font-size: 20px;
+  background-color: rgb(226, 191, 94);
+  border-radius: 5px;
+  border: 3px solid #000000;
+  position: absolute;
+  top: 540px;
+  left: 270px;
+  cursor: pointer;
+  box-shadow: 0 9px #574530;
+}
+/* 버튼 애니메이션 */
+#submitDiary:hover {
+  background-color: #FF8C00;
+}
+#submitDiary:active {
+  background-color: #FF8C00;
+  box-shadow: 0 5px #574530;
+  transform: translateY(4px);
+}
+
+/* 스케줄 기록 PopUp */
+.eventWrite {
+  width: 400px;
+  height: 300px;
+  border: 8px dashed #a15e36;
+  background-image: url('./image/backgroundimage2.jpg');
+  font-family: 'Jua', sans-serif;
+  font-size: 30px;
+  color: black;
+  position: relative;
+  padding-left: 30px;
+  left: 850px;
+  top: 10px;
+  display: none;
+}
+.eventWrite input[type="date"] {
+  border-bottom: 3px dashed #65532f;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  font-family: 'Jua', sans-serif;
+  font-size: 20px;
+  background: transparent;
+  width: 250px;
+  margin-bottom: 20px;
+}
+.eventWrite p {
+  font-size: 40px;
+  margin-top: 20px;
+}
+
+/* 저장 버튼 */
+#saveEvent_button {
+  font-family: 'Jua', sans-serif;
+  background-color: #FDE379;
+  font-size: 20px;
+  position: absolute;
+  left: 350px;
+  top: 250px;
+}
+/* 버튼 효과 */
+#saveEvent_button:active {
+  background-color: #ffbc00;
+  transform: translateY(4px);
+}
+
+/* 수정 버튼 */
+#updateEvent_button {
+  font-family: 'Jua', sans-serif;
+  background-color: #FDE379;
+  font-size: 20px;
+  position: absolute;
+  left: 290px;
+  top: 250px;
+}
+/* 버튼 효과 */
+#updateEvent_button:active {
+  background-color: #ffbc00;
+  transform: translateY(4px);
+}
+
+/* 삭제 버튼 */
+#deleteEvent_button {
+  font-family: 'Jua', sans-serif;
+  background-color: #FDE379;
+  font-size: 20px;
+  position: absolute;
+  left: 30px;
+  top: 250px;
+}
+/* 버튼 효과 */
+#deleteEvent_button:active {
+  background-color: #ffbc00;
+  transform: translateY(4px);
+}
+
+/* cancel 버튼 */
+#button_X {
+  color: #fff;
+  background: #de5c3c;
+  border-radius: 15px;
+  display: block;
+  border: 3px solid black;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  left: 385px;
+  top: 15px;
+}
+/* 버튼 애니메이션 */
+#button_X:hover {
+  background: #3f3f3f;
+  cursor: pointer;
+}
+#button_X:active {
+  background: #2f2f2f;
+  cursor: pointer;
+}
+
+/* 게시판 이동 Button */
+#notice_board {
+  font-family: 'Jua', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  background-color: rgb(175, 159, 117);
+  border-radius: 5px;
+  border: 3px solid #000000;
+  margin-left: 20px;
+  position: absolute;
+  bottom: 20px;
+}
+/* 버튼 눌림 효과 */
+#notice_board:active {
+  transform: translateY(4px);
+}

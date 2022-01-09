@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <!-- favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="https://www.flaticon.com/svg/static/icons/svg/2362/2362277.svg">
+  <link rel="stylesheet" href="main_board.css">
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <title>Pet_Diary</title>
+</head>
+
+<body>
+  <!-- sidebar -->
+  <input type="checkbox" id="menuicon">
+  <label for="menuicon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+  <div class="sidebar">
+    <div class="left-sidebar-menu">
+      <div class="user-data">
+        <div class="dog-profile"></div>
+        <span class="dog-name"></span>
+        <span class="dog-age"></span>
+        <span class="dog-hobby"></span>
+        <fieldset>
+          <legend>D-day</legend>
+          <div id="D-day"></div>
+        </fieldset>
+        <input type="button" id="notice_board" value="자유 게시판" onclick="goto_noticeBord()">
+        <input type="button" id="logout" value="Logout" onclick="Logout()">
+      </div>
+    </div>
+  </div>
+
+  <!-- write event -->
+  <img src="./image/event.png" alt="" id="eventButton" onclick="eventPopup()">
+  <!-- <img src="./image/diary.png" alt="" id="diaryButton"> -->
+
+  <!-- calendar -->
+  <div class="main">
+    <div class="content-left">
+      <div class="main-wrap">
+        <div id="main-day" class="main-day"></div>
+        <div id="main-date" class="main-date"></div>
+      </div>
+
+      <!-- writeDiaray -->
+      <div class="todo-wrap">
+        <div class="input-wrap">
+          <div class="writeDiary">
+            <input type="file" id="imageFile" accept="image/*">
+            <label for="imageFile" id="writeDay">
+              <img src="./image/focus.png" id="pocusImage">
+            </label>
+            <div class="paper-content">
+              <textarea id="textdiary" class="textdiary" name="textdiary"></textarea>
+            </div>
+            <input type="button" id="modifyDiary" class="modifyDiary" value="수정" onclick="modifiy()">
+            <input type="submit" id="submitDiary" class="submitDiary" value="저장하기">
+          </div>
+        </div>
+      </div>
+
+      <!-- calendar -->
+    </div>
+    <div class="content-right">
+      <table id="calendar" align="center">
+        <thead>
+          <tr class="btn-wrap clearfix">
+            <td>
+              <label id="prev">
+                &#60;
+              </label>
+            </td>
+            <td align="center" id="current-year-month" colspan="5"></td>
+            <td>
+              <label id="next">
+                &#62;
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td class="sun" align="center">Sun</td>
+            <td align="center">Mon</td>
+            <td align="center">Tue</td>
+            <td align="center">Wed</td>
+            <td align="center">Thu</td>
+            <td align="center">Fri</td>
+            <td class="sat" align="center">Sat</td>
+          </tr>
+        </thead>
+        <tbody id="calendar-body" class="calendar-body"></tbody>
+      </table>
+    </div>
+
+    <!-- eventWrite popUp -->
+    <div class="eventWrite" id="eventWrite">
+      <p>Create a schedule</p>
+      날짜 : <input type="date" name="" value="" id="event_date"><br>
+      할일 : <input type="text" name="" value="" id="emoji_text" placeholder="최대 10자까지 작성해주세요"><br>
+      <input type="button" name="" value="저장" id="saveEvent_button" onclick="saveEvent()">
+      <input type="button" name="" value="수정" id="updateEvent_button" onclick="updateEvent()">
+      <input type="button" name="" value="삭제" id="deleteEvent_button" onclick="deleteEvent()">
+      <button type="button" name="button_X" id="button_X" onclick="cancel_X()">x</button>
+      <link rel="stylesheet" href="emojionearea.min.css">
+      <script src="emojionearea.min.js"></script>
+    </div>
+
+  </div>
+  <script src="calendar.js?=1"></script>
+</body>
+
+</html>
